@@ -1,0 +1,8 @@
+<!--An ordered list for the articles posted-->
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
