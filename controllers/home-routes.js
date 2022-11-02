@@ -107,5 +107,14 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// render signup template
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+      res.redirect('/dashboard');
+      return;
+  }
+  res.render('signup');
+});
+
 // Export the router
 module.exports = router;
